@@ -1,11 +1,18 @@
-# Báo Cáo Đánh Giá Kỹ Thuật VES/PA
+# Toa-Bosh-AEX
 
-Báo cáo so sánh vendor **TOA · BOSCH · AEX** cho hệ thống Voice Evacuation / Public Address (EN54-16).
+Báo cáo đánh giá kỹ thuật VES/PA (EN54-16) — so sánh vendor **TOA · BOSCH · AEX**.
 
 ## Xem báo cáo
 
-Mở [index.html](./index.html) trên trình duyệt hoặc truy cập GitHub Pages sau khi deploy.
+- **GitHub Pages:** https://cuonglamphu.github.io/Toa-Bosh-AEX/
+- **Local:** mở [index.html](./index.html) trên trình duyệt
 
-## GitHub Pages
+## Nội dung
 
-Repository dùng `index.html` ở thư mục gốc. Bật Pages: **Settings → Pages → Branch `main` / root**.
+- Comply Spec (controller, ngoại vi, amplifier, mạng)
+- TCO, Magic Quadrant, Scoring matrix, Radar chart
+- Khuyến nghị chiến lược & kết luận
+
+## Deploy
+
+Push lên `main` → GitHub Actions tự deploy Pages (`.github/workflows/pages.yml`).
