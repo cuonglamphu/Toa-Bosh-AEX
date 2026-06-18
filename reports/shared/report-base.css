@@ -169,7 +169,17 @@ body.report-body {
   max-width: 88px;
 }
 
-/* Header bảng đỏ: logo trên nền trắng — tránh PNG nền đen trên gradient đỏ */
+/* Red Tabulator vendor column headers — white text on gradient (no logo pill) */
+.vendor-head-name {
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+/* Logo pill — not used on Tabulator red headers */
 .vendor-head-logo {
   display: inline-flex;
   align-items: center;

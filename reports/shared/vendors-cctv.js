@@ -21,7 +21,11 @@ window.VendorUi = {
     const cls = size === 'sm' ? 'vendor-logo-wrap sm' : 'vendor-logo-wrap';
     return `<span class="${cls}"><img src="${v.logo}" alt="${v.name}" class="vendor-logo-img" loading="lazy" /></span>`;
   },
-  /** Header bảng đỏ — logo trên nền trắng, không lặp tên vendor */
+  /** Red gradient Tabulator headers — white text vendor name */
+  titleTextFormatter(v) {
+    return () => `<span class="vendor-head-name">${v.name}</span>`;
+  },
+  /** Logo pill for non-Tabulator contexts (kept for compatibility) */
   titleFormatter(v) {
     return () => `<span class="vendor-head-logo">${VendorUi.logo(v, 'sm')}</span>`;
   }

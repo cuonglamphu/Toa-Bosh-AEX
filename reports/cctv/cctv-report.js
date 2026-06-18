@@ -31,7 +31,7 @@
     cssClass: v.colClass,
     hozAlign: 'center',
     headerSort: false,
-    titleFormatter: VendorUi.titleFormatter(v),
+    titleFormatter: VendorUi.titleTextFormatter(v),
     ...extra
   });
 
