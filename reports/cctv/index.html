@@ -6,249 +6,204 @@
   <title>Báo Cáo So Sánh CCTV — Honeywell · Hanwha · AXIS</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet" />
+  <link href="../shared/report-base.css" rel="stylesheet" />
+  <link href="cctv.css" rel="stylesheet" />
   <script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { 600:'#e31b23', 900:'#1a1a1a' } } } } };
+    tailwind.config = { theme: { extend: { colors: { brand: { 600: '#e31b23', 900: '#1a1a1a' } } } } };
   </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
-    :root { --one-red:#e31b23; --one-red-darker:#9b1419; }
-    body { font-family:'DM Sans',system-ui,sans-serif; background:#fafafa; color:#1a1a1a; }
-    .report-section { background:#fff; border-radius:16px; border:1px solid #fee2e2; padding:2rem; margin-bottom:1.5rem; }
-    .section-num { display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:8px;background:var(--one-red);color:#fff;font-size:.8rem;font-weight:700;margin-right:.75rem; }
-    .section-title { font-size:1.25rem;font-weight:700; }
-    .table-wrap { border-radius:12px;border:1px solid #e5e5e5;overflow:hidden;margin:1rem 0; }
-    .report-tabulator.tabulator { border:none;font-size:.875rem; }
-    .report-tabulator .tabulator-header { background:linear-gradient(180deg,var(--one-red-darker),var(--one-red)); }
-    .report-tabulator .tabulator-header .tabulator-col-title { color:#fff;font-weight:600;font-size:.75rem;text-transform:uppercase; }
-    .report-tabulator .tabulator-header .tabulator-col { background:transparent;border-right:1px solid rgba(255,255,255,.1); }
-    .report-tabulator .tabulator-header .tabulator-col.col-honeywell { box-shadow:inset 0 3px 0 #d97706; }
-    .report-tabulator .tabulator-header .tabulator-col.col-hanwha { box-shadow:inset 0 3px 0 #2563eb; }
-    .report-tabulator .tabulator-header .tabulator-col.col-axis { box-shadow:inset 0 3px 0 #525252; }
-    .report-tabulator .tabulator-row { min-height:52px; border-bottom:1px solid #f0f0f0; }
-    .report-tabulator .tabulator-row.tabulator-row-even { background:#fafafa; }
-    .pill { display:inline-flex;padding:.35rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;white-space:normal;text-align:center; }
-    .pill-pass { background:#ecfdf5;color:#047857;border:1px solid #a7f3d0; }
-    .pill-warn { background:#fffbeb;color:#b45309;border:1px solid #fde68a; }
-    .pill-fail { background:#fef2f2;color:#b91c1c;border:1px solid #fecaca; }
-    .pill-neutral { background:#f5f5f5;color:#525252;border:1px solid #e5e5e5; }
-    .kpi { text-align:center;padding:1.25rem;border-radius:12px;border:1px solid #fee2e2;background:rgba(254,242,242,.35); }
-    .chart-panel { background:#fafafa;border:1px solid #eee;border-radius:12px;padding:1.25rem;min-height:280px; }
-    #ui-tooltip { position:fixed;z-index:9999;pointer-events:none;opacity:0;transform:scale(.96);transition:opacity .12s; }
-    #ui-tooltip.is-visible { opacity:1;transform:scale(1); }
-    #ui-tooltip .tip-content { max-width:280px;padding:6px 12px;font-size:12px;line-height:1.5;background:#1a1a1a;color:#fafafa;border-radius:6px; }
-  </style>
 </head>
-<body>
-<div id="report-root">
+<body class="report-body">
+
+<div id="report-export-root">
   <header class="bg-white border-b-4 border-brand-600">
     <div class="max-w-6xl mx-auto px-6 py-8 text-center">
       <img src="../../assets/logo-one.png" alt="ONE." class="h-12 mx-auto mb-4 object-contain" />
       <p class="text-brand-600 text-xs uppercase tracking-[.2em] font-semibold">Technical Comparison · REV01</p>
       <h1 class="text-2xl md:text-3xl font-bold mt-2">Hệ Thống CCTV</h1>
-      <p class="text-neutral-500 mt-2 text-sm">Honeywell · Hanwha · AXIS — Cảng HKQT Gia Bình Phase 1.1</p>
+      <p class="text-neutral-500 mt-2 text-sm">Cảng HKQT Gia Bình Phase 1.1 · Gói MEPF</p>
+      <div class="vendor-logo-strip">
+        <span class="vendor-logo-wrap"><img src="../../assets/Heneywell_logo.png" alt="Honeywell" class="vendor-logo-img" /></span>
+        <span class="vendor-logo-wrap"><img src="../../assets/Hanwa_logo.png" alt="Hanwha Vision" class="vendor-logo-img" /></span>
+        <span class="vendor-logo-wrap"><img src="../../assets/Axis_logo.png" alt="AXIS" class="vendor-logo-img" /></span>
+      </div>
     </div>
   </header>
 
-  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-red-100">
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-red-100 no-print">
     <div class="max-w-6xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3 text-sm">
-      <a href="../../index.html" class="text-brand-600 font-semibold hover:underline">← Trang chủ</a>
-      <span class="text-neutral-400" id="nav-meta">Đang tải dữ liệu…</span>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="../../index.html" class="text-brand-600 font-semibold hover:underline">← Trang chủ</a>
+        <div class="hidden sm:flex flex-wrap gap-x-3 gap-y-1 text-neutral-500 text-xs md:text-sm">
+          <a href="#s1" class="hover:text-brand-600">Tổng quan</a>
+          <a href="#s2" class="hover:text-brand-600">Thị trường</a>
+          <a href="#s3" class="hover:text-brand-600">Comply</a>
+          <a href="#s4" class="hover:text-brand-600">Scoring</a>
+          <a href="#s5" class="hover:text-brand-600">Radar</a>
+          <a href="#s6" class="hover:text-brand-600">Quyết định</a>
+          <a href="#s7" class="hover:text-brand-600">Luận điểm</a>
+          <a href="#s8" class="hover:text-brand-600">Kết luận</a>
+        </div>
+      </div>
+      <button type="button" id="btn-export-pdf-nav" class="btn-export-pdf" onclick="exportReportPdf()" title="Export PDF">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V3m0 0L7.5 7.5M12 3l4.5 4.5M4.5 19.5h15"/></svg>
+        Export PDF
+      </button>
     </div>
   </nav>
 
   <main class="max-w-6xl mx-auto px-4 md:px-6 py-10">
-    <section class="report-section">
-      <div class="flex items-start mb-4">
+
+    <section id="s1" class="report-section">
+      <div class="flex items-start mb-5">
         <span class="section-num">1</span>
         <div>
-          <h2 class="section-title">Tổng quan dự án</h2>
-          <p class="text-sm text-neutral-500 mt-2" id="project-meta"></p>
+          <h2 class="section-title">Tổng quan &amp; bối cảnh dự án</h2>
+          <p class="lead mt-3" id="narrative-hook"></p>
         </div>
       </div>
-      <div class="grid sm:grid-cols-3 gap-4" id="kpi-row"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <div class="rounded-xl bg-neutral-50 border border-neutral-200 px-4 py-3 text-sm"><span class="text-neutral-400 font-medium">I · 35%</span><br/>NVR Server 64CH</div>
+        <div class="rounded-xl bg-neutral-50 border border-neutral-200 px-4 py-3 text-sm"><span class="text-neutral-400 font-medium">II · 25%</span><br/>Dome IP PoE 5MP</div>
+        <div class="rounded-xl bg-neutral-50 border border-neutral-200 px-4 py-3 text-sm"><span class="text-neutral-400 font-medium">III · 15%</span><br/>Dome thang máy</div>
+        <div class="rounded-xl bg-neutral-50 border border-neutral-200 px-4 py-3 text-sm"><span class="text-neutral-400 font-medium">IV · 25%</span><br/>Bullet IP ngoài trời</div>
+      </div>
+      <div class="source-box mb-5" id="source-meta"></div>
+      <div class="grid md:grid-cols-3 gap-5 mb-6" id="vendor-overview"></div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="insight-card"><p class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Insight 01</p><p class="text-sm text-neutral-600 leading-relaxed" id="narrative-f1"></p></div>
+        <div class="insight-card"><p class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Insight 02</p><p class="text-sm text-neutral-600 leading-relaxed" id="narrative-f2"></p></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mt-5">
+        <div class="insight-card"><p class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Insight 03</p><p class="text-sm text-neutral-600 leading-relaxed" id="narrative-f3"></p></div>
+        <div class="insight-card"><p class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Insight 04</p><p class="text-sm text-neutral-600 leading-relaxed" id="narrative-f4"></p></div>
+      </div>
+      <div class="insight-card mt-4"><p class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Insight 05</p><p class="text-sm text-neutral-600 leading-relaxed" id="narrative-f5"></p></div>
+      <div class="mt-6" id="partial-summary"></div>
     </section>
 
-    <section class="report-section">
-      <div class="flex items-start mb-4">
+    <section id="s2" class="report-section">
+      <div class="flex items-start mb-5">
         <span class="section-num">2</span>
         <div>
-          <h2 class="section-title">Comply Spec theo nhóm thiết bị</h2>
-          <p class="text-sm text-neutral-500 mt-1">Nguồn: Technical comparison.CCTV.REV01.csv · Di chuột vào ô để xem model &amp; thông số.</p>
+          <h2 class="section-title">Vị thế thị trường &amp; nguồn tham chiếu</h2>
+          <p class="lead mt-3">Omdia · Frost &amp; Sullivan APAC · ICAO Annex 17 · ACI · ONVIF · benchmark VN — bổ sung ngoài REV01.</p>
         </div>
       </div>
+      <p class="text-xs text-neutral-500 uppercase tracking-wider font-semibold mb-3">Magic Quadrant (Execution × Vision)</p>
+      <div class="table-wrap mb-6"><div id="table-market" class="report-tabulator"></div></div>
+      <div class="quadrant-chart-wrap mb-6">
+        <div class="quadrant-chart-inner">
+          <span class="quadrant-label tl">Visionaries</span>
+          <span class="quadrant-label tr">Platform Leaders</span>
+          <span class="quadrant-label bl">Niche / Regional</span>
+          <span class="quadrant-label br">Enterprise Leaders</span>
+          <div class="chart-crisp sm"><canvas id="chartMarket"></canvas></div>
+        </div>
+      </div>
+      <div class="insight-card mb-6">
+        <p class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Tổng hợp vị thế</p>
+        <p class="text-sm text-neutral-600 leading-relaxed" id="market-narrative"></p>
+      </div>
+      <p class="text-xs text-neutral-500 uppercase tracking-wider font-semibold mb-3">Ma trận năng lực thị trường (1–10)</p>
+      <div class="table-wrap mb-6"><div id="table-market-dim" class="report-tabulator"></div></div>
+      <div class="chart-crisp md mb-8"><canvas id="chartMarketDim"></canvas></div>
+      <p class="text-xs text-neutral-500 uppercase tracking-wider font-semibold mb-3">Vertical sân bay — fit theo use case</p>
+      <div class="table-wrap mb-6"><div id="table-vertical" class="report-tabulator"></div></div>
+      <p class="text-xs text-neutral-500 uppercase tracking-wider font-semibold mb-3">Xu hướng thị trường 2024–2027</p>
+      <div class="table-wrap mb-6"><div id="table-trends" class="report-tabulator"></div></div>
+      <div class="source-box mb-6" id="ref-list"></div>
+      <p class="text-xs text-neutral-500 uppercase tracking-wider font-semibold mb-4">Deep Insight — Luận điểm thị trường</p>
+      <div class="grid md:grid-cols-2 gap-4 mb-2" id="market-insights"></div>
+    </section>
+
+    <section id="s3" class="report-section">
+      <div class="flex items-start mb-4">
+        <span class="section-num">3</span>
+        <div>
+          <h2 class="section-title">Comply Spec — chi tiết kỹ thuật</h2>
+          <p class="lead mt-3">Mở từng nhóm để audit. Di chuột vào ✅ ⚠️ xem model submittal. <span class="text-neutral-400">Kéo ngang bảng nếu không thấy cột AXIS.</span></p>
+        </div>
+      </div>
+      <p class="table-scroll-note no-print">← Cuộn ngang →</p>
       <div id="section-tables"></div>
     </section>
 
-    <section class="report-section">
+    <section id="s4" class="report-section">
       <div class="flex items-start mb-4">
-        <span class="section-num">3</span>
-        <div><h2 class="section-title">Tỷ lệ đáp ứng (% Full comply)</h2></div>
+        <span class="section-num">4</span>
+        <div>
+          <h2 class="section-title">Ma trận chấm điểm</h2>
+          <p class="lead mt-3">Full=1 · Partial=0.5 · Nguồn: cột Comply REV01</p>
+        </div>
       </div>
-      <div class="chart-panel"><canvas id="scoreChart"></canvas></div>
+      <div class="table-wrap"><div id="table-scoring" class="report-tabulator"></div></div>
+      <div class="chart-crisp sm mt-6"><canvas id="chartScore"></canvas></div>
     </section>
 
-    <section class="report-section text-white" style="background:linear-gradient(145deg,#9b1419,#e31b23);border:none;">
+    <section id="s5" class="report-section">
+      <div class="flex items-start mb-5">
+        <span class="section-num">5</span>
+        <div>
+          <h2 class="section-title">Tương quan năng lực theo nhóm</h2>
+          <p class="lead mt-3">Radar 4 trục — Server · Dome · Elevator · Bullet</p>
+        </div>
+      </div>
+      <div class="chart-crisp mb-8"><canvas id="chartRadar"></canvas></div>
+      <div class="grid md:grid-cols-3 gap-4" id="radar-cards"></div>
+    </section>
+
+    <section id="s6" class="report-section">
       <div class="flex items-start mb-6">
-        <span class="section-num" style="background:#fff;color:#e31b23;">4</span>
-        <div><h2 class="section-title text-white">Kết luận sơ bộ</h2></div>
+        <span class="section-num">6</span>
+        <div>
+          <h2 class="section-title">Phân tích quyết định</h2>
+          <p class="lead mt-3">Ba kịch bản hành động — không chỉ chọn điểm cao nhất.</p>
+        </div>
+      </div>
+      <div class="space-y-4" id="scenarios"></div>
+    </section>
+
+    <section id="s7" class="report-section">
+      <div class="flex items-start mb-5">
+        <span class="section-num">7</span>
+        <div><h2 class="section-title">Luận điểm kỹ thuật theo vendor</h2></div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-5" id="vendor-args"></div>
+    </section>
+
+    <section id="s8" class="report-section border-l-4 border-brand-600">
+      <div class="flex items-start mb-6">
+        <span class="section-num">8</span>
+        <div><h2 class="section-title">Kết luận &amp; khuyến nghị</h2></div>
       </div>
       <div class="grid md:grid-cols-3 gap-4 mb-6" id="conclusion-kpi"></div>
-      <p class="text-red-100/95 text-sm leading-relaxed" id="conclusion-text"></p>
+      <div id="conclusion-text"></div>
+      <p class="text-xs text-neutral-400 mt-6" id="conclusion-source"></p>
     </section>
   </main>
 
   <footer class="text-center py-8 border-t border-red-100 bg-white text-xs text-neutral-500">
-    Báo cáo CCTV · Gia Bình IA · 11/06/2026
+    Báo cáo CCTV · Gia Bình IA · <span id="footer-source">Technical comparison REV01</span> · 11/06/2026
   </footer>
 </div>
 
+<button type="button" id="btn-export-pdf-fab" class="btn-export-pdf export-fab no-print" onclick="exportReportPdf()" title="Export PDF">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V3m0 0L7.5 7.5M12 3l4.5 4.5M4.5 19.5h15"/></svg>
+  PDF
+</button>
+
 <div id="ui-tooltip" aria-hidden="true"><div class="tip-content"></div></div>
 
-<script>
-const pill = (level, text) => `<span class="pill pill-${level === 'pass' ? 'pass' : level === 'warn' ? 'warn' : level === 'fail' ? 'fail' : 'neutral'}">${text}</span>`;
-
-const wrapTip = (html, tip) => {
-  if (!tip) return html;
-  const safe = String(tip).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
-  return `<span class="tip-trigger" tabindex="0" data-tip="${safe}" style="cursor:help">${html}</span>`;
-};
-
-const vendorCell = (v) => {
-  const c = v.comply || { level:'na', label:'—' };
-  const tip = [v.model, v.data].filter(Boolean).join(' · ');
-  return wrapTip(pill(c.level, c.label), tip);
-};
-
-const mapRows = (rows) => rows.map(r => ({
-  criteria: r.criteria,
-  spec: (r.spec || '').slice(0, 120),
-  honeywell: vendorCell(r.honeywell),
-  hanwha: vendorCell(r.hanwha),
-  axis: vendorCell(r.axis),
-  honeywellTip: `${r.honeywell.model} — ${r.honeywell.data}`,
-  hanwhaTip: `${r.hanwha.model} — ${r.hanwha.data}`,
-  axisTip: `${r.axis.model} — ${r.axis.data}`
-})).map(row => {
-  ['honeywell','hanwha','axis'].forEach(f => {
-    const k = `${f}Tip`;
-    if (row[f] && row[k]) row[f] = wrapTip(row[f].replace(/<span class="tip-trigger"[^>]*>|<\/span>/g,''), row[k]);
-  });
-  return row;
-});
-
-const cols = [
-  { title:'Tiêu chí', field:'criteria', minWidth:160, widthGrow:1.5, headerSort:false },
-  { title:'Baseline spec', field:'spec', minWidth:140, widthGrow:1.2, headerSort:false, formatter:'textarea' },
-  { title:'Honeywell', field:'honeywell', minWidth:130, formatter:'html', cssClass:'col-honeywell', hozAlign:'center', headerSort:false },
-  { title:'Hanwha', field:'hanwha', minWidth:130, formatter:'html', cssClass:'col-hanwha', hozAlign:'center', headerSort:false },
-  { title:'AXIS', field:'axis', minWidth:130, formatter:'html', cssClass:'col-axis', hozAlign:'center', headerSort:false }
-];
-
-function scoreVendor(rows, key) {
-  let pass = 0, warn = 0, fail = 0;
-  rows.forEach(r => {
-    const l = r[key]?.comply?.level || 'na';
-    if (l === 'pass') pass++;
-    else if (l === 'warn') warn++;
-    else if (l === 'fail') fail++;
-  });
-  const total = rows.length || 1;
-  const pct = Math.round((pass + warn * 0.5) / total * 100);
-  return { pass, warn, fail, total, pct };
-}
-
-function allRows(sections) { return sections.flatMap(s => s.rows); }
-
-async function init() {
-  const res = await fetch('../../data/cctv-data.json');
-  const { sections } = await res.json();
-
-  document.getElementById('project-meta').innerHTML =
-    '<strong>Dự án:</strong> Cảng hàng không quốc tế Gia Bình — Phase 1.1 · ' +
-    '<strong>Gói:</strong> MEPF · <strong>NCC:</strong> Honeywell, Hanwha, AXIS · <strong>Rev:</strong> 01 · 11/06/2026';
-  document.getElementById('nav-meta').textContent = `${sections.length} nhóm · ${allRows(sections).length} tiêu chí`;
-
-  const rows = allRows(sections);
-  const sH = scoreVendor(rows, 'honeywell');
-  const sW = scoreVendor(rows, 'hanwha');
-  const sA = scoreVendor(rows, 'axis');
-
-  document.getElementById('kpi-row').innerHTML = `
-    <div class="kpi"><p class="text-xs text-neutral-500 mb-1">Honeywell</p><p class="text-2xl font-bold text-amber-700">${sH.pct}%</p><p class="text-xs text-neutral-400 mt-1">${sH.pass} full · ${sH.warn} partial</p></div>
-    <div class="kpi"><p class="text-xs text-neutral-500 mb-1">Hanwha</p><p class="text-2xl font-bold text-blue-700">${sW.pct}%</p><p class="text-xs text-neutral-400 mt-1">${sW.pass} full · ${sW.warn} partial</p></div>
-    <div class="kpi"><p class="text-xs text-neutral-500 mb-1">AXIS</p><p class="text-2xl font-bold text-neutral-800">${sA.pct}%</p><p class="text-xs text-neutral-400 mt-1">${sA.pass} full · ${sA.warn} partial</p></div>`;
-
-  const container = document.getElementById('section-tables');
-  sections.forEach((sec, i) => {
-    const title = sec.title.split('/').pop().trim() || sec.title;
-    const id = `table-sec-${i}`;
-    container.innerHTML += `<p class="text-xs uppercase tracking-wider font-semibold text-neutral-500 mt-6 mb-2">${sec.id}. ${title}</p><div class="table-wrap"><div id="${id}" class="report-tabulator"></div></div>`;
-  });
-
-  sections.forEach((sec, i) => {
-    new Tabulator(`#table-sec-${i}`, {
-      layout:'fitColumns', headerSort:false, responsiveLayout:false,
-      columns: cols,
-      data: sec.rows.map(r => ({
-        criteria: r.criteria,
-        spec: r.spec,
-        honeywell: vendorCell(r.honeywell),
-        hanwha: vendorCell(r.hanwha),
-        axis: vendorCell(r.axis)
-      }))
-    });
-  });
-
-  const scores = [sH.pct, sW.pct, sA.pct];
-  const leader = ['Honeywell','Hanwha','AXIS'][scores.indexOf(Math.max(...scores))];
-
-  document.getElementById('conclusion-kpi').innerHTML = `
-    <div class="rounded-xl bg-white/10 px-4 py-3 text-center"><p class="text-red-100 text-xs">Điểm comply</p><p class="text-xl font-bold">${leader}</p></div>
-    <div class="rounded-xl bg-white/10 px-4 py-3 text-center"><p class="text-red-100 text-xs">Partial nhiều nhất</p><p class="text-xl font-bold">Hanwha</p></div>
-    <div class="rounded-xl bg-white/10 px-4 py-3 text-center"><p class="text-red-100 text-xs">Server/NVR</p><p class="text-xl font-bold">AXIS</p></div>`;
-
-  document.getElementById('conclusion-text').textContent =
-    `Honeywell đạt tỷ lệ full comply cao trên storage server (HN35640800NR) nhưng có điểm partial tại cổng mạng 10GbE. Hanwha mạnh performance (520Mbps, 80TB) nhưng nhiều mục partial ở quyền tài khoản và cảnh báo. AXIS vượt spec tại bandwidth/recording nhưng partial tại HDMI và một số mục form-factor. Khuyến nghị: chọn ${leader} nếu ưu tiên tỷ lệ đáp ứng tổng thể; cần làm rõ Design Deviation cho các mục partial trước phê duyệt.`;
-
-  new Chart(document.getElementById('scoreChart'), {
-    type:'bar',
-    data:{
-      labels:['Honeywell','Hanwha','AXIS'],
-      datasets:[{ label:'Comply index %', data:scores, backgroundColor:['#d97706','#2563eb','#525252'], borderRadius:8, barThickness:48 }]
-    },
-    options:{ responsive:true, maintainAspectRatio:false, scales:{ y:{ min:0, max:100, ticks:{ callback:v=>v+'%' } } }, plugins:{ legend:{ display:false } } }
-  });
-
-  initTooltips();
-}
-
-function initTooltips() {
-  const portal = document.getElementById('ui-tooltip');
-  const content = portal.querySelector('.tip-content');
-  let active = null;
-  const show = (el) => {
-    const t = el.getAttribute('data-tip');
-    if (!t) return;
-    active = el;
-    content.textContent = t;
-    portal.classList.add('is-visible');
-    const r = el.getBoundingClientRect();
-    portal.style.top = (r.top - portal.offsetHeight - 8) + 'px';
-    portal.style.left = Math.max(8, r.left + r.width/2 - portal.offsetWidth/2) + 'px';
-  };
-  const hide = () => { portal.classList.remove('is-visible'); active = null; };
-  document.addEventListener('mouseover', e => {
-    const t = e.target.closest('.tip-trigger');
-    if (t) show(t); else if (!portal.contains(e.target)) hide();
-  });
-}
-
-init().catch(err => {
-  document.getElementById('nav-meta').textContent = 'Lỗi tải dữ liệu';
-  console.error(err);
-});
-</script>
+<script src="../../data/cctv-data.js"></script>
+<script src="../../data/cctv-insights.js"></script>
+<script src="../shared/vendors-cctv.js"></script>
+<script src="../shared/report-charts.js"></script>
+<script src="../shared/report-tooltips.js"></script>
+<script src="../shared/report-pdf.js"></script>
+<script src="cctv-report.js"></script>
 </body>
 </html>

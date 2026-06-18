@@ -1,10 +1,12 @@
 {
   "meta": {
-    "project": "Project / D? �n: D? �n ??u t? x�y d?ng c?ng h�ng kh�ng qu?c t? Gia B�nh - giai ?o?n 1.1",
-    "package": "G�i th?u C? ?i?n / MEPF",
-    "items": "\"H?ng m?c / Items: H? th?ng Public Access / CCTV System  �  Nh� s?n xu?t ?? xu?t / Proposed Manufacturer: Honeywell",
+    "project": "Dự án đầu tư xây dựng cảng hàng không quốc tế Gia Bình — giai đoạn 1.1",
+    "package": "Gói thầu Cơ điện / MEPF",
+    "items": "Hệ thống CCTV — Honeywell · Hanwha · AXIS",
     "date": "11/06/2026",
-    "revision": "1",
+    "revision": "REV01",
+    "sourceFile": "Technical comparison.CCTV.REV01.csv",
+    "sourcePath": "data/cctv-comparison.csv",
     "vendors": [
       "Honeywell",
       "Hanwha",
@@ -14,16 +16,17 @@
   "sections": [
     {
       "id": "I",
-      "title": "Server l?u tr? camera IP / IP Camera Storage Server",
+      "title": "NVR Server · IP Camera Storage Server",
+      "label": "NVR Server",
       "rows": [
         {
           "stt": "1",
           "criteria": "Storage support",
-          "spec": "H? tr? l?u tr? L�n t?i 64TB / Storage support: Up to 64TB",
+          "spec": "Storage support: Up to 64TB",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "T?i ?a: 8x10TB / Max: 8x10TB",
+            "data": "Max: 8x10TB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -32,16 +35,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB2",
-            "data": "L�n t?i 80TB / Up to 80TB",
+            "data": "Up to 80TB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "S1264 Rack 64 TB / S1264 Rack 64 TB",
+            "data": "S1264 Rack 64 TB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -51,11 +54,11 @@
         {
           "stt": "2",
           "criteria": "Storage drive (included)",
-          "spec": "? l?u tr? (bao g?m trong thi?t b?) ? 06 / Storage drive (included): ? 06",
+          "spec": "Storage drive (included): ≥06",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "Cung c?p s?n: 6x10TB / Offer: 6x10TB",
+            "data": "Offer: 6x10TB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -64,16 +67,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB3",
-            "data": "8 Khay ? c?ng SATA / 8 SATA HDD Bays",
+            "data": "8 SATA HDD Bays",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "T?ng s? khay ? c?ng: 12 / Total HDD slot: 12",
+            "data": "Total HDD slot: 12",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -83,11 +86,11 @@
         {
           "stt": "3",
           "criteria": "RAID support",
-          "spec": "H? tr? RAID C� / RAID support: Yes",
+          "spec": "RAID support: Yes",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "RAID: 1/5/6 / RAID: 1/5/6",
+            "data": "6",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -96,16 +99,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB4",
-            "data": "H? tr? RAID-5/6 / Supports RAID-5/6",
+            "data": "6",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "Dung l??ng l?u tr? m?c ??nh: 56 TB sau khi thi?t l?p RAID 5; Dung l??ng g?c (kh�ng RAID): 64 TB (8x8 TB) / Out-of-the-box storage: 56 TB after RAID 5; Out-of-the-box capacity without RAID: 64 TB (8x8 TB)",
+            "data": "Out-of-the-box storage: 56 TB after RAID 5; Out-of-the-box capacity without RAID: 64 TB (8x8 TB)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -115,11 +118,11 @@
         {
           "stt": "4",
           "criteria": "Performance",
-          "spec": "Hi?u su?t ?400 Mbps / Performance: ?400 Mbps",
+          "spec": "Performance: ≥400 Mbps",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "L�n ??n 400 Mbps / Up to 400 Mbps",
+            "data": "Up to 400 Mbps",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -128,16 +131,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB5",
-            "data": "T?i ?a 520Mbps / Max. 520Mbps",
+            "data": "Max. 520Mbps",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "?�p ?ng cho 192 c?a v� b?ng th�ng ghi h�nh l�n t?i 850 Mbit/s / Qualified for 192 doors and a recording bitrate up to 850 Mbit/s",
+            "data": "s",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -147,11 +150,11 @@
         {
           "stt": "5",
           "criteria": "Protocol",
-          "spec": "Giao th?c Onvif / Protocol: Onvif",
+          "spec": "Protocol: Onvif",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "Chu?n Onvif / Onvif",
+            "data": "Onvif",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -160,16 +163,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB6",
-            "data": "IPv4, IPv6, TCP/IP, UDP/IP, RTP (UDP), RTP (TCP), RTSP, RTCP, NTP, HTTP, DHCP (M�y ch?, M�y kh�ch), SMTP, ICMP, IGMP, ARP, DNS, DDNS, uPnP, HTTPS, SNMP, ONVIF (Profile-S), SUNAPI (M�y ch?, M�y kh�ch) / IPv4, IPv6, TCP/IP, UDP/IP, RTP (UDP), RTP (TCP), RTSP, RTCP, NTP, HTTP, DHCP (Server, Client), SMTP, ICMP, IGMP, ARP, DNS, DDNS, uPnP, HTTPS, SNMP, ONVIF (Profile-S), SUNAPI (Server, Client)",
+            "data": "IP, RTP (UDP), RTP (TCP), RTSP, RTCP, NTP, HTTP, DHCP (Server, Client), SMTP, ICMP, IGMP, ARP, DNS, DDNS, uPnP, HTTPS, SNMP, ONVIF (Profile-S), SUNAPI (Server, Client)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "Chu?n ONVIF Profile S, G, T, M / ONVIF Profile S, G, T, M",
+            "data": "ONVIF Profile S, G, T, M",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -179,11 +182,11 @@
         {
           "stt": "6",
           "criteria": "Video compression",
-          "spec": "Chu?n n�n H.264, H.265 / Video compression: H.264, H.265",
+          "spec": "Video compression: H.264, H.265",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "H.264, H.265 / H.264, H.265",
+            "data": "H.264, H.265",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -192,16 +195,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB7",
-            "data": "H.265, H.264, MJPEG / H.265, H.264, MJPEG",
+            "data": "H.265, H.264, MJPEG",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "H.264, H.265 (Th�ng qua ph?n m?m Axis Camera Station) / H.264, H.265 (Via Axis Camera Station)",
+            "data": "H.264, H.265 (Via Axis Camera Station)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -211,11 +214,11 @@
         {
           "stt": "7",
           "criteria": "Video output",
-          "spec": "??u ra h�nh ?nh 1 HDMI, 1 VGA / Video output: 1 HDMI, 1 VGA",
+          "spec": "Video output: 1 HDMI, 1 VGA",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "L�n ??n 400 Mbps / Up to 400 Mbps",
+            "data": "Up to 400 Mbps",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -224,16 +227,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB8",
-            "data": "HDMI 1: 3840 x 2160 (30Hz), HDMI 2: 1920x1080 (60Hz) / HDMI 1: 3840 x 2160 (30Hz), HDMI 2: 1920x1080 (60Hz)",
+            "data": "HDMI 1: 3840 x 2160 (30Hz), HDMI 2: 1920x1080 (60Hz)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "1 C?ng VGA (Kh�ng c� HDMI t�ch h?p s?n) / 1x VGA (No built-in HDMI)",
+            "data": "1x VGA (No built-in HDMI)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -243,11 +246,11 @@
         {
           "stt": "8",
           "criteria": "User accounts",
-          "spec": "T�i kho?n truy c?p 10 users / User accounts: 10 users",
+          "spec": "User accounts: 10 users",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "S? l??ng ng??i d�ng t?i ?a: 16 / Maximum Number Of Users: 16",
+            "data": "Maximum Number Of Users: 16",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -256,16 +259,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB9",
-            "data": "S? ng??i d�ng t? xa t?i ?a: Tr?c ti?p Unicast(10), Multicast(20) / Max Remote Users: Live Unicast(10), Multicast(20)",
+            "data": "Max Remote Users: Live Unicast(10), Multicast(20)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "?a ng??i d�ng (Th�ng qua Windows Server/ACS) / Multi-user (via Windows Server/ACS)",
+            "data": "ACS)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -275,11 +278,11 @@
         {
           "stt": "9",
           "criteria": "Account authorization",
-          "spec": "Ph�n quy?n t�i kho?n Menu, PTZ, Relay, Playback, Power off, Copy, Network MIC, Camera Setup / Account authorization: Menu, PTZ, Relay, Playback, Power off, Copy, Network MIC, Camera Setup",
+          "spec": "Account authorization: Menu, PTZ, Relay, Playback, Power off, Copy, Network MIC, Camera Setup",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "Menu, PTZ, R?-le, Ph�t l?i, T?t ngu?n, Sao ch�p, MIC M?ng, C�i ??t Camera / Menu, PTZ, Relay, Playback, Power off, Copy, Network MIC, Camera Setup",
+            "data": "Menu, PTZ, Relay, Playback, Power off, Copy, Network MIC, Camera Setup",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -288,16 +291,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB10",
-            "data": "Tr?c ti?p, T�m ki?m, Xu?t d? li?u, Menu, Ghi h�nh, D?ng ghi h�nh, ?i?u khi?n PTZ, T?t ngu?n, K�ch ho?t th? c�ng / Live, Search, Export, Menu, Record, Stop recording, PTZ control, Shutdown, Manual trigger",
+            "data": "Live, Search, Export, Menu, Record, Stop recording, PTZ control, Shutdown, Manual trigger",
             "comply": {
               "level": "warn",
               "label": "⚠️ Partial"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "C�. Ph�n quy?n ??y ?? c?p ?? qu?n tr? vi�n v� ng??i d�ng / Yes. Full access control for administrator and user levels",
+            "data": "Yes. Full access control for administrator and user levels",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -307,11 +310,11 @@
         {
           "stt": "10",
           "criteria": "IP video input",
-          "spec": "K�nh h�nh ?nh ??u v�o 64CH IP video / IP video input: 64CH IP video",
+          "spec": "IP video input: 64CH IP video",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "64 K�nh / 64 Channels",
+            "data": "64 Channels",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -320,16 +323,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB11",
-            "data": "T?i ?a 64 K�nh / Max. 64CH",
+            "data": "Max. 64CH",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "T�ch h?p s?n 64 gi?y ph�p l�i (Core Licenses) cho AXIS Camera Station, c� th? m? r?ng l�n 96 k�nh / Includes 64 Core Licenses for AXIS Camera Station, scalable up to 96 channels",
+            "data": "Includes 64 Core Licenses for AXIS Camera Station, scalable up to 96 channels",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -339,11 +342,11 @@
         {
           "stt": "11",
           "criteria": "Connection ports",
-          "spec": "C?ng k?t n?i ? 2 � 10 GbE SFP+ ports, 2 Gigabit Ethernet RJ-45 port (10/100/1000Mbps) / Connection ports: ? 2 � 10 GbE SFP+ ports, 2 Gigabit Ethernet RJ-45 port (10/100/1000Mbps)",
+          "spec": "1000Mbps)",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "2 C?ng m?ng Ethernet 10/100/1000 Mbps (RJ-45) / 10/100/1000 Mbps Ethernet (RJ-45) x 2",
+            "data": "1000 Mbps Ethernet (RJ-45) x 2",
             "comply": {
               "level": "warn",
               "label": "⚠️ Partial"
@@ -352,16 +355,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB12",
-            "data": "3 C?ng m?ng RJ-45 (LAN/WAN, 1Gbps) / RJ-45 3EA (LAN/WAN, 1Gbps)",
+            "data": "WAN, 1Gbps)",
             "comply": {
               "level": "warn",
               "label": "⚠️ Partial"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "2 C?ng m?ng RJ45 1GbE / 2x 1GbE RJ45",
+            "data": "2x 1GbE RJ45",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -371,11 +374,11 @@
         {
           "stt": "12",
           "criteria": "Alarm",
-          "spec": "C?nh b�o L?i HDD, ??y ? c?ng HDD, sai m?t kh?u, l?i ghi h�nh, l?i WRS/DDNS / Alarm: HDD error, HDD full, incorrect password, recording error, WRS/DDNS error",
+          "spec": "DDNS error",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "?�p ?ng / Supported",
+            "data": "Supported",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -384,16 +387,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB13",
-            "data": "??i m?t kh?u, N�ng c?p, Tr?ng th�i ? c?ng, L?i qu?t, B?t/T?t ngu?n, B?t ??u ghi h�nh th? c�ng, K?t th�c ghi h�nh th? c�ng, L?i ghi h�nh, Kh�a t�i kho?n / Change password, Upgrade, HDD state, Fan failure, Power On/Off, Start manual recording, End manual recording, Recording error, Account locked",
+            "data": "Off, Start manual recording, End manual recording, Recording error, Account locked",
             "comply": {
               "level": "warn",
               "label": "⚠️ Partial"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "Gi�m s�t tr?ng th�i h? th?ng, c?nh b�o l?i ? c?ng/m?ng qua ph?n m?m ACS / System status monitoring, HDD/network failure alerts via ACS",
+            "data": "network failure alerts via ACS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -403,11 +406,11 @@
         {
           "stt": "13",
           "criteria": "Recording mode",
-          "spec": "Ch? ?? ghi h�nh Th? c�ng, s? ki?n, theo l?ch, kh?n c?p / Recording mode: Manual, event, schedule, emergency",
+          "spec": "Recording mode: Manual, event, schedule, emergency",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "?�p ?ng / Supported",
+            "data": "Supported",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -416,16 +419,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB14",
-            "data": "Ch? ?? ghi h�nh: B�nh th??ng, Lu?ng k�p, L?ch tr�nh (Li�n t?c/S? ki?n), S? ki?n (Tr??c/Sau), D?u trang / Mode Record: Normal, Dual Stream, Schedule (Continuous/Event), Event (Pre/Post), Bookmark",
+            "data": "Post), Bookmark",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "Ghi h�nh: Li�n t?c, th? c�ng, s? ki?n, l?ch tr�nh / Continuous, manual, event, schedule",
+            "data": "Continuous, manual, event, schedule",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -435,11 +438,11 @@
         {
           "stt": "14",
           "criteria": "Search mode",
-          "spec": "Ch? ?? t�m ki?m Th?i gian, s? ki?n, theo l?ch, Text, Chuy?n ??ng / Search mode: Time, event, schedule, Text, Motion",
+          "spec": "Search mode: Time, event, schedule, Text, Motion",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "?�p ?ng / Supported",
+            "data": "Supported",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -448,16 +451,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB15",
-            "data": "Ch? ?? t�m ki?m & Ph�t l?i: Th?i gian/S? ki?n/V?n b?n/ARB/D?u trang/T�m ki?m th�ng minh / Mode Search & Play: Time/Event/Text/ARB/Bookmark/Smart search",
+            "data": "Smart search",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "T�m ki?m: Th�ng minh, d�ng th?i gian, s? ki?n, v?n b?n / Smart search, timeline, event, text",
+            "data": "Smart search, timeline, event, text",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -467,11 +470,11 @@
         {
           "stt": "15",
           "criteria": "USB port",
-          "spec": "C?ng USB C� / USB port: Yes",
+          "spec": "USB port: Yes",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "C� / Yes",
+            "data": "Yes",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -480,16 +483,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB16",
-            "data": "4 C?ng USB (2 x USB 2.0 m?t tr??c + 2 x USB 3.0 m?t sau) / USB: 4EA (Front 2 x USB2.0 + Rear 2 x USB 3.0)",
+            "data": "USB: 4EA (Front 2 x USB2.0 + Rear 2 x USB 3.0)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "C� (T�ch h?p USB 3.0 / USB 2.0) / Yes (Integrated USB 3.0 / USB 2.0)",
+            "data": "USB 2.0)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -499,11 +502,11 @@
         {
           "stt": "16",
           "criteria": "Power supply",
-          "spec": "Ngu?n ??u v�o AC 100240V, 50/60Hz / Power supply: AC 100240V, 50/60Hz",
+          "spec": "60Hz",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "AC 100240V, 50/60Hz / AC 100240V, 50/60Hz",
+            "data": "60Hz",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -512,16 +515,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB17",
-            "data": "Ngu?n ??u v�o 100 ~ 240 VAC �10%; 50/60Hz / Power Input 100 ~ 240 VAC �10%; 50/60Hz",
+            "data": "60Hz",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "100-240 V AC, 50/60 Hz (B? ngu?n k�p c� th? c?m n�ng) / 100-240 V AC, 50/60 Hz (Dual hot-plug power supplies)",
+            "data": "60 Hz (Dual hot-plug power supplies)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -531,11 +534,11 @@
         {
           "stt": "17",
           "criteria": "Operating temperature",
-          "spec": "Nhi?t ?? v?n h�nh 10�C to 35�C (50�F to 95�F) / Operating temperature: 10�C to 35�C (50�F to 95�F)",
+          "spec": "Operating temperature: 10°C to 35°C (50°F to 95°F)",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HN35640800NR",
-            "data": "-10�C ~ 55�C (14�F ~ 131�F) / -10�C ~ 55�C (14�F ~ 131�F)",
+            "data": "-10°C ~ 55°C (14°F ~ 131°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -544,16 +547,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XRN-6420RB18",
-            "data": "Nhi?t ?? ho?t ??ng 0�C ??n +40�C (32? ??n 104?) / Operating Temperature 0�C to +40�C (32? to 104?)",
+            "data": "Operating Temperature 0°C to +40°C (32°F to 104°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "AXIS S1264 RACK 64 TB",
-            "data": "10 �C ??n 35 �C (50 �F ??n 95 �F) / 10 �C to 35 �C (50 �F to 95 �F)",
+            "data": "10°C to 35°C (50°F to 95°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -564,16 +567,17 @@
     },
     {
       "id": "II",
-      "title": "Camera IP b�n c?u c? ??nh ng�y ?�m/ PoE / Fixed Day/Night IP Dome Camera/ PoE",
+      "title": "Dome IP PoE · Fixed Day/Night IP Dome Camera",
+      "label": "Dome IP PoE",
       "rows": [
         {
           "stt": "1",
           "criteria": "Camera type",
-          "spec": "Lo?i Camera Camera IP b�n c?u h?ng ngo?i / Camera type: IR IP Dome Camera",
+          "spec": "Camera type: IR IP Dome Camera",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R2",
-            "data": "Camera b�n c?u / Dome Camera",
+            "data": "Dome Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -582,16 +586,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Camera IP b�n c?u h?ng ngo?i / IR Dome IP Camera",
+            "data": "IR Dome IP Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "Camera IP b�n c?u h?ng ngo?i / IR Dome IP Camera",
+            "data": "IR Dome IP Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -601,11 +605,11 @@
         {
           "stt": "2",
           "criteria": "Power supply",
-          "spec": "Ngu?n POE / Power supply: POE",
+          "spec": "Power supply: POE",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R3",
-            "data": "DC12V, PoE (IEEE 802.3af) (Class 0) / DC12V, PoE (IEEE 802.3af) (Class 0)",
+            "data": "DC12V, PoE (IEEE 802.3af) (Class 0)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -614,16 +618,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "PoE (IEEE802.3af, Class 3) / PoE (IEEE802.3af, Class3)",
+            "data": "PoE (IEEE802.3af, Class3)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "Ngu?n qua m?ng (PoE) IEEE 802.3af/802.3at Type 1 Class 3 / Power over Ethernet (PoE) IEEE 802.3af/802.3at Type 1 Class 3",
+            "data": "802.3at Type 1 Class 3",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -633,11 +637,11 @@
         {
           "stt": "3",
           "criteria": "Resolution",
-          "spec": "?? ph�n gi?i ?5MP / Resolution: ?5MP",
+          "spec": "Resolution: ≥5MP",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R4",
-            "data": "5MP / 5MP",
+            "data": "5MP",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -646,16 +650,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "5MP / 5MP",
+            "data": "5MP",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "Camera b�n c?u trong nh� 5 MP t�ch h?p AI / Indoor 5 MP AI-powered dome",
+            "data": "Indoor 5 MP AI-powered dome",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -665,11 +669,11 @@
         {
           "stt": "4",
           "criteria": "Image sensor",
-          "spec": "C?m bi?n h�nh ?nh CMOS. / Image sensor: CMOS.",
+          "spec": "Image sensor: CMOS.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R5",
-            "data": "CMOS / CMOS",
+            "data": "CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -678,16 +682,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "1/1.8 CMOS / 1/1.8 CMOS",
+            "data": "1.8 CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "C?m bi?n CMOS RGB qu�t li�n t?c 1/2.8� / 1/2.8� progressive scan RGB CMOS",
+            "data": "2.8\"progressive scan RGB CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -697,11 +701,11 @@
         {
           "stt": "5",
           "criteria": "Lens, IR",
-          "spec": "?ng k�nh, h?ng ngo?i ti�u c? ?i?u ch?nh ?�p ?ng 3.9mm9.4mm, h? tr? h?ng ngo?i IR ?30m. / Lens, IR: Adjustable focal length 3.9mm9.4mm, IR support ?30m.",
+          "spec": "Lens, IR: Adjustable focal length 3–9 mm9–4 mm, IR support ≥30m.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R6",
-            "data": "?ng k�nh: 2.7-13.5 mm, DC-Iris, F1.6-F3.3, MFZ; T?m xa h?ng ngo?i: L�n ??n 50 m / Lens: 2.7-13.5 mm, DC-Iris, F1.6-F3.3, MFZ; IR Distance: up to 50 m",
+            "data": "Lens: 2.7-13–5 mm, DC-Iris, F1.6-F3.3, MFZ; IR Distance: up to 50 m",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -710,16 +714,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Ti�u c? ?ng k�nh 3.99.4mm, LED h?ng ngo?i; T?m nh�n h?ng ngo?i: 30m (98.4ft) / Focal Length (mm) 3.99.4mm, IR LED; Light Viewable Length: 30m (98.4ft)",
+            "data": "Focal Length (mm) 3.99–4 mm, IR LED; Light Viewable Length: 30m (98.4ft)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "?ng k�nh thay ??i ti�u c?, 3.0�8.5 mm, F1.38�2.58; G�c nh�n ngang: 104��34�; T?m nh�n xa h?ng ngo?i: 40 m (130 ft) ho?c xa h?n t�y thu?c v�o b?i c?nh / Lens: Varifocal, 3.0�8.5 mm, F1.38�2.58; Horizontal field of view: 104��34�; Range of reach 40 m (130 ft) or more depending on the scene",
+            "data": "Lens: Varifocal, 3.08–5 mm, F1.382.58; Horizontal field of view: 10434; Range of reach 40 m (130 ft) or more depending on the scene",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -729,11 +733,11 @@
         {
           "stt": "6",
           "criteria": "Video compression",
-          "spec": "Chu?n n�n H.264, H.265, MJPEG. / Video compression: H.264, H.265, MJPEG.",
+          "spec": "Video compression: H.264, H.265, MJPEG.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R7",
-            "data": "H.265 HEVC/H.264/MJPEG, M� h�a th�ng minh / H.265 HEVC/H.264/MJPEG, Smart Codec",
+            "data": "MJPEG, Smart Codec",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -742,16 +746,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "H.265/H.264: Main/Baseline/High, MJPEG / H.265/H.264: Main/Baseline/High, MJPEG",
+            "data": "High, MJPEG",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "C�ng ngh? Axis Zipstream tr�n chu?n AV1, H.264 v� H.265; C� th? ki?m so�t t?c ?? khung h�nh v� b?ng th�ng (VBR/ABR/MBR) / Axis Zipstream technology in AV1, H.264 and H.265; Controllable frame rate and bandwidth VBR/ABR/MBR H.264/H.265/AV1",
+            "data": "AV1",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -761,11 +765,11 @@
         {
           "stt": "7",
           "criteria": "Max frame rate",
-          "spec": "T?c ?? khung h�nh t?i ?a 30fps@5M (2592�1944) with WDR 120 dB. / Max frame rate: 30fps@5M (2592�1944) with WDR 120 dB.",
+          "spec": "Max frame rate: 30fps@5M (25921944) with WDR 120 dB.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R8",
-            "data": "T?c ?? khung h�nh: T?i ?a 30 fps / Frame Rate: MAX 30 fps",
+            "data": "Frame Rate: MAX 30 fps",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -774,16 +778,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "T?c ?? khung h�nh 30fps ? ?? ph�n gi?i 5MP (2560x1920), Ch?ng ng??c s�ng WDR 120dB / 30fps@ 5MP (2560x1920), WDR 120dB",
+            "data": "30fps@ 5MP (2560x1920), WDR 120dB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "L�n ??n 25/30 fps (50/60 Hz) ? t?t c? c�c ?? ph�n gi?i / Up to 25/30 fps (50/60 Hz) in all resolutions",
+            "data": "60 Hz) in all resolutions",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -793,11 +797,11 @@
         {
           "stt": "8",
           "criteria": "Operating temperature",
-          "spec": "Nhi?t ?? ho?t ??ng Ph� h?p trong d?i: -10�C ~ 45�C(-14�F ~ +113�F) / Operating temperature: Suitable range: -10�C ~ 45�C(-14�F ~ +113�F)",
+          "spec": "Operating temperature: Suitable range: -10°C ~ 45°C(-14°F ~ +113°F)",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R9",
-            "data": "Nhi?t ?? ho?t ??ng: -40�C ~ 60�C (-40�F ~ 140�F) / Working Temperature: -40�C ~ 60�C (-40�F ~ 140�F)",
+            "data": "Working Temperature: -40°C ~ 60°C (-40°F ~ 140°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -806,16 +810,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Nhi?t ?? ho?t ??ng -10�C~+55�C (+14�F~+131�F) / Temperature -10�C~+55�C (+14�F~+131�F)",
+            "data": "Temperature -10°C~+55°C (+14°F~+131°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "Nhi?t ?? ho?t ??ng: 0 �C ??n 50 �C (32 �F ??n 122 �F) / Temperature: 0 �C to 50 �C (32 �F to 122 �F)",
+            "data": "Temperature: 0°C to 50°C (32°F to 122°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -825,11 +829,11 @@
         {
           "stt": "9",
           "criteria": "Minimum illumination",
-          "spec": "?? nh?y s�ng t?i thi?u ?0.3 lux Ch? ?? m�u. / Minimum illumination: ?0.3 lux Color mode.",
+          "spec": "Minimum illumination: ≥0.3 lux Color mode.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R10",
-            "data": "0.005 Lux / F1.6 (M�u, 30 IRE), 0 Lux / F1.6 (B?t h?ng ngo?i) / 0.005 Lux / F1.6 (Color, 30 IRE), 0 Lux / F1.6 (IR ON)",
+            "data": "F1.6 (IR ON)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -838,16 +842,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "M�u (1/30 gi�y, 30IRE) 0.07 Lux; Tr?ng/?en (1/30 gi�y, 30IRE) 0.007 Lux / Color (1/30sec, 30IRE) 0.07 Lux; B/W (1/30sec, 30IRE) 0.007 Lux",
+            "data": "30sec, 30IRE) 0.007 Lux",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "M�u: 0.1 lux t?i 50 IRE, F1.38; ?en/Tr?ng: 0.03 lux t?i 50 IRE, F1.38 / Color: 0.1 lux at 50 IRE, F1.38; B/W: 0.03 lux at 50 IRE, F1.38",
+            "data": "W: 0.03 lux at 50 IRE, F1.38",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -857,11 +861,11 @@
         {
           "stt": "10",
           "criteria": "Video analytics support",
-          "spec": "H? tr? c�c t�nh n?ng ph�n t�ch video Intrusion detection, Line crossing, Loitering, Motion detection, Tampering detection / Video analytics support: Intrusion detection, Line crossing, Loitering, Moti",
+          "spec": "Video analytics support: Intrusion detection, Line crossing, Loitering, Motion detection, Tampering detection",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R11",
-            "data": "??m ng??i, L?ng v?ng nhi?u ng??i, X�m nh?p, Thay ??i khung c?nh, Ph�t hi?n chuy?n ??ng th�ng minh (SMD), Ph�t hi?n chuy?n ??ng, Ph�t hi?n khu�n m?t, Ph�t hi?n v??t ranh gi?i / People Counter, Multi Loitering, Intrusion, Scene Change, Smart Motion Detection (SMD), Motion Detection, Face Detection, Line Crossing Detection",
+            "data": "People Counter, Multi Loitering, Intrusion, Scene Change, Smart Motion Detection (SMD), Motion Detection, Face Detection, Line Crossing Detection",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -870,16 +874,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Ph�t hi?n m?t ti�u c?, Ph�t hi?n chuy?n ??ng, Gi? m?o, Ph�t hi?n s??ng m�, Ph�t hi?n khu�n m?t, Ph�t hi?n �m thanh, Ph�n lo?i �m thanh, Khu v?c ?o (L?ng v?ng, X�m nh?p, V�o/Ra, Xu?t hi?n/Bi?n m?t), Ranh gi?i ?o (V??t qua, H??ng), Theo d�i t? ??ng k? thu?t s? / Defocus detection, Motion detection, Tampering, Fog detection, Face detection, Audio detection, Sound classification, Virtual area (Loitering, Intrusion, Enter/Exit, Appear/Disappear), Virtual line (Crossing, Direction), Digital auto tracking",
+            "data": "Disappear), Virtual line (Crossing, Direction), Digital auto tracking",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "P1487-LE",
-            "data": "Ph�n t�ch ??i t??ng AXIS - Ph�n lo?i: Con ng??i, ph??ng ti?n (� t�, xe bu�t, xe t?i, xe ??p, kh�c); C�c k?ch b?n: V??t ranh gi?i, c� m?t trong khu v?c, ??m v??t tuy?n, chi?m ch?, ?i b�m ?u�i, gi�m s�t ?? b?o h? (BETA), chuy?n ??ng (t?i ?a 10 k?ch b?n); C�c t�nh n?ng kh�c: Hi?n th? qu? ??o, khung bao quanh m� h�a m�u; ?a gi�c khu v?c bao g?m/lo?i tr?; C?u h�nh ph?i c?nh; S? ki?n b�o ??ng ONVIF / AXIS Object Analytics - Object classes: humans, vehicles (cars, buses, trucks, bikes, other); Scenarios: line crossing, object in area, time in area, crossline counting, occupancy, tailgating, PPE monitoring (BETA), motion (Up to 10 scenarios); Other features: trajectories, color-coded bounding boxes; Polygon include/exclude areas; Perspective config; ONVIF Alarm event",
+            "data": "exclude areas; Perspective config; ONVIF Alarm event",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -890,16 +894,17 @@
     },
     {
       "id": "III",
-      "title": "Camera IP b�n c?u c? ??nh ng�y ?�m/ PoE l?p trong thang m�y / Fixed Day/Night IP Dome Camera/ PoE for Elevators",
+      "title": "Dome thang máy · Elevator Dome IP Camera",
+      "label": "Dome thang máy",
       "rows": [
         {
           "stt": "1",
           "criteria": "Camera type",
-          "spec": "Lo?i Camera Camera IP b�n c?u h?ng ngo?i / Camera type: IR IP Dome Camera",
+          "spec": "Camera type: IR IP Dome Camera",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R2",
-            "data": "Camera b�n c?u / Dome Camera",
+            "data": "Dome Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -908,16 +913,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Camera IP b�n c?u h?ng ngo?i / IR Dome IP Camera",
+            "data": "IR Dome IP Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R2",
-            "data": "Camera b�n c?u / Dome Camera",
+            "data": "Dome Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -927,11 +932,11 @@
         {
           "stt": "2",
           "criteria": "Power supply",
-          "spec": "Ngu?n POE / Power supply: POE",
+          "spec": "Power supply: POE",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R3",
-            "data": "DC12V, PoE (IEEE 802.3af) (Class 0) / DC12V, PoE (IEEE 802.3af) (Class 0)",
+            "data": "DC12V, PoE (IEEE 802.3af) (Class 0)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -940,16 +945,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "PoE (IEEE802.3af, Class 3) / PoE (IEEE802.3af, Class3)",
+            "data": "PoE (IEEE802.3af, Class3)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R3",
-            "data": "DC12V, PoE (IEEE 802.3af) (Class 0) / DC12V, PoE (IEEE 802.3af) (Class 0)",
+            "data": "DC12V, PoE (IEEE 802.3af) (Class 0)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -959,11 +964,11 @@
         {
           "stt": "3",
           "criteria": "Resolution",
-          "spec": "?? ph�n gi?i ?5MP / Resolution: ?5MP",
+          "spec": "Resolution: ≥5MP",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R4",
-            "data": "5MP / 5MP",
+            "data": "5MP",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -972,16 +977,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "5MP / 5MP",
+            "data": "5MP",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R4",
-            "data": "5MP / 5MP",
+            "data": "5MP",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -991,11 +996,11 @@
         {
           "stt": "4",
           "criteria": "Image sensor",
-          "spec": "C?m bi?n h�nh ?nh ?1/2.8 CMOS. / Image sensor: ?1/2.8 CMOS.",
+          "spec": "2.8\"CMOS.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R5",
-            "data": "1/2.8� CMOS / 1/2.8� CMOS",
+            "data": "2.8\"CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1004,16 +1009,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "1/1.8 CMOS / 1/1.8 CMOS",
+            "data": "1.8 CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R5",
-            "data": "1/2.8� CMOS / 1/2.8� CMOS",
+            "data": "2.8\"CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1023,11 +1028,11 @@
         {
           "stt": "5",
           "criteria": "Lens, IR",
-          "spec": "?ng k�nh, h?ng ngo?i ti�u c? ?i?u ch?nh ?�p ?ng 3.9mm9.4mm, h? tr? h?ng ngo?i IR ?30m. / Lens, IR: Adjustable focal length 3.9mm9.4mm, IR support ?30m.",
+          "spec": "Lens, IR: Adjustable focal length 3–9 mm9–4 mm, IR support ≥30m.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R6",
-            "data": "?ng k�nh: 2.7-13.5 mm, DC-Iris, F1.6-F3.3, MFZ / Lens: 2.7-13.5 mm, DC-Iris, F1.6-F3.3, MFZ",
+            "data": "Lens: 2.7-13–5 mm, DC-Iris, F1.6-F3.3, MFZ",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1036,16 +1041,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Ti�u c? ?ng k�nh 3.99.4mm, LED h?ng ngo?i; T?m nh�n h?ng ngo?i: 30m (98.4ft) / Focal Length (mm) 3.99.4mm, IR LED; Light Viewable Length: 30m (98.4ft)",
+            "data": "Focal Length (mm) 3.99–4 mm, IR LED; Light Viewable Length: 30m (98.4ft)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R6",
-            "data": "?ng k�nh: 2.7-13.5 mm, DC-Iris, F1.6-F3.3, MFZ / Lens: 2.7-13.5 mm, DC-Iris, F1.6-F3.3, MFZ",
+            "data": "Lens: 2.7-13–5 mm, DC-Iris, F1.6-F3.3, MFZ",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1055,11 +1060,11 @@
         {
           "stt": "6",
           "criteria": "Video compression",
-          "spec": "Chu?n n�n H.264, H.265, MJPEG. / Video compression: H.264, H.265, MJPEG.",
+          "spec": "Video compression: H.264, H.265, MJPEG.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R7",
-            "data": "T?m xa h?ng ngo?i: L�n ??n 50 m / IR Distance: up to 50 m",
+            "data": "IR Distance: up to 50 m",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1068,16 +1073,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "H.265/H.264: Main/Baseline/High, MJPEG / H.265/H.264: Main/Baseline/High, MJPEG",
+            "data": "High, MJPEG",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R7",
-            "data": "T?m xa h?ng ngo?i: L�n ??n 50 m / IR Distance: up to 50 m",
+            "data": "IR Distance: up to 50 m",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1087,11 +1092,11 @@
         {
           "stt": "7",
           "criteria": "Max frame rate",
-          "spec": "T?c ?? khung h�nh t?i ?a 30fps@5M (2592�1944) with WDR 120 dB. / Max frame rate: 30fps@5M (2592�1944) with WDR 120 dB.",
+          "spec": "Max frame rate: 30fps@5M (25921944) with WDR 120 dB.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R8",
-            "data": "H.265 HEVC/H.264/MJPEG, M� h�a th�ng minh / H.265 HEVC/H.264/MJPEG, Smart Codec",
+            "data": "MJPEG, Smart Codec",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1100,16 +1105,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "T?c ?? khung h�nh 30fps ? ?? ph�n gi?i 5MP (2560x1920), Ch?ng ng??c s�ng WDR 120dB / 30fps@ 5MP (2560x1920), WDR 120dB",
+            "data": "30fps@ 5MP (2560x1920), WDR 120dB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R8",
-            "data": "H.265 HEVC/H.264/MJPEG, M� h�a th�ng minh / H.265 HEVC/H.264/MJPEG, Smart Codec",
+            "data": "MJPEG, Smart Codec",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1119,11 +1124,11 @@
         {
           "stt": "8",
           "criteria": "Operating temperature",
-          "spec": "Nhi?t ?? ho?t ??ng Ph� h?p trong d?i: -10�C ~ 45�C(-14�F ~ +113�F) / Operating temperature: Suitable range: -10�C ~ 45�C(-14�F ~ +113�F)",
+          "spec": "Operating temperature: Suitable range: -10°C ~ 45°C(-14°F ~ +113°F)",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R9",
-            "data": "Nhi?t ?? ho?t ??ng: -40�C ~ 60�C (-40�F ~ 140�F) / Working Temperature: -40�C ~ 60�C (-40�F ~ 140�F)",
+            "data": "Working Temperature: -40°C ~ 60°C (-40°F ~ 140°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1132,16 +1137,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Nhi?t ?? ho?t ??ng -10�C~+55�C (+14�F~+131�F) / Temperature -10�C~+55�C (+14�F~+131�F)",
+            "data": "Temperature -10°C~+55°C (+14°F~+131°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R9",
-            "data": "Nhi?t ?? ho?t ??ng: -40�C ~ 60�C (-40�F ~ 140�F) / Working Temperature: -40�C ~ 60�C (-40�F ~ 140�F)",
+            "data": "Working Temperature: -40°C ~ 60°C (-40°F ~ 140°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1151,11 +1156,11 @@
         {
           "stt": "9",
           "criteria": "Minimum illumination",
-          "spec": "?? nh?y s�ng t?i thi?u ?0.3 lux Ch? ?? m�u. / Minimum illumination: ?0.3 lux Color mode.",
+          "spec": "Minimum illumination: ≥0.3 lux Color mode.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R10",
-            "data": "0.005 Lux / F1.6 (M�u, 30 IRE), 0 Lux / F1.6 (B?t h?ng ngo?i) / 0.005 Lux / F1.6 (Color, 30 IRE), 0 Lux / F1.6 (IR ON)",
+            "data": "F1.6 (IR ON)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1164,16 +1169,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "M�u (1/30 gi�y, 30IRE) 0.07 Lux; Tr?ng/?en (1/30 gi�y, 30IRE) 0.007 Lux / Color (1/30sec, 30IRE) 0.07 Lux; B/W (1/30sec, 30IRE) 0.007 Lux",
+            "data": "30sec, 30IRE) 0.007 Lux",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R10",
-            "data": "0.005 Lux / F1.6 (M�u, 30 IRE), 0 Lux / F1.6 (B?t h?ng ngo?i) / 0.005 Lux / F1.6 (Color, 30 IRE), 0 Lux / F1.6 (IR ON)",
+            "data": "F1.6 (IR ON)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1183,11 +1188,11 @@
         {
           "stt": "10",
           "criteria": "Video analytics support",
-          "spec": "H? tr? c�c t�nh n?ng ph�n t�ch video Intrusion detection, Line crossing, Loitering, Motion detection, Tampering detection / Video analytics support: Intrusion detection, Line crossing, Loitering, Moti",
+          "spec": "Video analytics support: Intrusion detection, Line crossing, Loitering, Motion detection, Tampering detection",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC35W45R11",
-            "data": "??m ng??i, L?ng v?ng nhi?u ng??i, X�m nh?p, Thay ??i khung c?nh, Ph�t hi?n chuy?n ??ng th�ng minh (SMD), Ph�t hi?n chuy?n ??ng, Ph�t hi?n khu�n m?t, Ph�t hi?n v??t ranh gi?i / People Counter, Multi Loitering, Intrusion, Scene Change, Smart Motion Detection (SMD), Motion Detection, Face Detection, Line Crossing Detection",
+            "data": "People Counter, Multi Loitering, Intrusion, Scene Change, Smart Motion Detection (SMD), Motion Detection, Face Detection, Line Crossing Detection",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1196,16 +1201,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XND-8080RV",
-            "data": "Ph�t hi?n m?t ti�u c?, Ph�t hi?n chuy?n ??ng, Gi? m?o, Ph�t hi?n s??ng m�, Ph�t hi?n khu�n m?t, Ph�t hi?n �m thanh, Ph�n lo?i �m thanh, Khu v?c ?o (L?ng v?ng, X�m nh?p, V�o/Ra, Xu?t hi?n/Bi?n m?t), Ranh gi?i ?o (V??t qua, H??ng), Theo d�i t? ??ng k? thu?t s? / Defocus detection, Motion detection, Tampering, Fog detection, Face detection, Audio detection, Sound classification, Virtual area (Loitering, Intrusion, Enter/Exit, Appear/Disappear), Virtual line (Crossing, Direction), Digital auto tracking",
+            "data": "Disappear), Virtual line (Crossing, Direction), Digital auto tracking",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
+            "brand": "AXIS, Sweden",
             "model": "HC35W45R11",
-            "data": "??m ng??i, L?ng v?ng nhi?u ng??i, X�m nh?p, Thay ??i khung c?nh, Ph�t hi?n chuy?n ??ng th�ng minh (SMD), Ph�t hi?n chuy?n ??ng, Ph�t hi?n khu�n m?t, Ph�t hi?n v??t ranh gi?i / People Counter, Multi Loitering, Intrusion, Scene Change, Smart Motion Detection (SMD), Motion Detection, Face Detection, Line Crossing Detection",
+            "data": "People Counter, Multi Loitering, Intrusion, Scene Change, Smart Motion Detection (SMD), Motion Detection, Face Detection, Line Crossing Detection",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1216,16 +1221,17 @@
     },
     {
       "id": "IV",
-      "title": "Camera IP th�n c? ??nh ng�y ?�m trong, ngo�i nh� / Indoor/Outdoor Fixed Day/Night IP Bullet Camera",
+      "title": "Bullet IP · Indoor/Outdoor Bullet Camera",
+      "label": "Bullet IP",
       "rows": [
         {
           "stt": "1",
           "criteria": "Camera type",
-          "spec": "Lo?i Camera Camera IP Th�n tr? h?ng ngo?i / Camera type: IR IP Bullet Camera",
+          "spec": "Camera type: IR IP Bullet Camera",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "Camera th�n tr? / Bullet Camera",
+            "data": "Bullet Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1234,16 +1240,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "Camera IP th�n tr? h?ng ngo?i / IR Bullet IP Camera",
+            "data": "IR Bullet IP Camera",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "Camera IP th�n tr? h?ng ngo?i / Bullet Camera infrared",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "Bullet Camera infrared",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1253,11 +1259,11 @@
         {
           "stt": "2",
           "criteria": "Power supply",
-          "spec": "Ngu?n POE, 12VDC / Power supply: POE, 12VDC",
+          "spec": "Power supply: POE, 12VDC",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "AC24V, 1.5A, 50-60 Hz; ho?c DC12V?2.5A; ho?c PoE 44-57V?, 350 mA (IEEE 802.3af) / AC24V, 1.5A, 50-60 Hz; or DC12V?2.5A; or PoE 44-57V?, 350 mA (IEEE 802.3af)",
+            "data": "AC24V, 1.5A, 50-60 Hz; or DC12V?2.5A; or PoE 44-57V?, 350 mA (IEEE 802.3af)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1266,16 +1272,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "PoE (IEEE802.3af, Class 3) / PoE (IEEE802.3af, Class3)",
+            "data": "PoE (IEEE802.3af, Class3)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "Ngu?n qua m?ng (PoE) IEEE 802.3af/802.3at Type 1 Class 3, t?i ?a 12.95 W / Power over Ethernet IEEE 802.3af/802.3at Type 1 Class 3, max 12.95 W",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "802.3at Type 1 Class 3, max 12.95 W",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1285,11 +1291,11 @@
         {
           "stt": "3",
           "criteria": "Resolution",
-          "spec": "?? ph�n gi?i ?5MP / Resolution: ?5MP",
+          "spec": "Resolution: ≥5MP",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "5MP / 5MP",
+            "data": "5MP",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1298,16 +1304,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "?? ph�n gi?i h�nh ?nh 5MP / 5MP Image Resolution",
+            "data": "5MP Image Resolution",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "?? ph�n gi?i h�nh ?nh 5MP / 5MP Image Resolution",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "5MP Image Resolution",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1317,11 +1323,11 @@
         {
           "stt": "4",
           "criteria": "Image sensor",
-          "spec": "C?m bi?n h�nh ?nh ?1/2.8 CMOS. / Image sensor: ?1/2.8 CMOS.",
+          "spec": "2.8\"CMOS.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "1/2.8�� CMOS / 1/2.8�� CMOS",
+            "data": "2.8\"CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1330,16 +1336,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "1/2.8, CMOS / 1/2.8, CMOS",
+            "data": "2.8\"CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "C?m bi?n CMOS 1/2.8 / 1/2.8, CMOS",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "2.8\"CMOS",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1349,11 +1355,11 @@
         {
           "stt": "5",
           "criteria": "Lens, IR",
-          "spec": "?ng k�nh, h?ng ngo?i ti�u c? ?i?u ch?nh ?�p ?ng 3.4 mm10.5mm, h? tr? h?ng ngo?i IR ?50m. / Lens, IR: Adjustable focal length 3.4 mm10.5mm, IR support ?50m.",
+          "spec": "Lens, IR: Adjustable focal length 3–4 mm10–5 mm, IR support ≥50m.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "?ng k�nh: 2.7-13.5 mm, F1.4-F2.8, P-Iris; T?m xa h?ng ngo?i: L�n ??n 60 m (197 ft) / Lens: 2.7-13.5 mm, F1.4-F2.8, P-Iris; IR Distance: Up to 60 m (197 ft)",
+            "data": "Lens: 2.7-13–5 mm, F1.4-F2.8\"P-Iris; IR Distance: Up to 60 m (197 ft)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1362,16 +1368,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "Ti�u c? ?ng k�nh 3.39.3mm, LED h?ng ngo?i; T?m nh�n h?ng ngo?i WiseIR: 50m (164.04ft) / Focal Length (mm) 3.39.3mm, IR LED; Light Viewable Length: WiseIR 50m (164.04ft)",
+            "data": "Focal Length (mm) 3.39–3 mm, IR LED; Light Viewable Length: WiseIR 50m (164.04ft)",
             "comply": {
               "level": "warn",
               "label": "⚠️ Partial"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "?ng k�nh thay ??i ti�u c?, 3�8.5 mm, F1.36-2.58; G�c nh�n ngang: 106?-35?; G�c nh�n d?c: 77?-26?; T?m nh�n xa: 50 m (164 ft) ho?c xa h?n t�y thu?c v�o b?i c?nh / Lens Varifocal, 3�8.5 mm, F1.36-2.58; Horizontal field of view 106?-35?; Vertical field of view 77?-26?; Range of reach 50 m (164 ft) or more depending on the scene",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "Lens Varifocal, 38–5 mm, F1.36-2.58; Horizontal field of view 106?-35?; Vertical field of view 77?-26?; Range of reach 50 m (164 ft) or more depending on the scene",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1381,11 +1387,11 @@
         {
           "stt": "6",
           "criteria": "Environmental standard",
-          "spec": "Ti�u chu?n m�i tr??ng IP66, Type 4X / Environmental standard: IP66, Type 4X",
+          "spec": "Environmental standard: IP66, Type 4X",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "IP66, IP67, NEMA 4X; IK10 / IP66, IP67, NEMA 4X; IK10",
+            "data": "IP66, IP67, NEMA 4X; IK10",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1394,16 +1400,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "Chu?n b?o v? IP66/IP67, NEMA 250 type 4X, NEMA TS 2-2013 / IP66/IP67, NEMA 250 type 4X, NEMA TS 2-2013",
+            "data": "IP67, NEMA 250 type 4X, NEMA TS 2-2013",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "V? m�y ??t chu?n b?o v? IP66/IP67, NEMA 4X v� ch?ng va ??p IK10 / IP66/IP67-, NEMA 4X-, and IK10-rated casing",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "IP67-, NEMA 4X-, and IK10-rated casing",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1413,11 +1419,11 @@
         {
           "stt": "7",
           "criteria": "Video compression",
-          "spec": "Chu?n n�n H.264, H.265, MJPEG. / Video compression: H.264, H.265, MJPEG.",
+          "spec": "Video compression: H.264, H.265, MJPEG.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "H.265 HEVC / H.264 / MJPEG, M� h�a th�ng minh / H.265 HEVC / H.264 / MJPEG, Smart Codec",
+            "data": "MJPEG, Smart Codec",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1426,16 +1432,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "H.265/H.264: Main/Baseline/High, MJPEG / H.265/H.264: Main/Baseline/High, MJPEG",
+            "data": "High, MJPEG",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "Chu?n n�n Video H.264 (MPEG-4 Part 10/AVC) Baseline, Main v� High Profiles; H.265 (MPEG-H Part 2/HEVC) Main Profile; AV1; Motion JPEG / Video compression H.264 (MPEG-4 Part 10/AVC) Baseline, Main and High Profiles H.265 (MPEG-H Part 2/HEVC) Main Profile AV1 Motion JPEG",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "HEVC) Main Profile AV1 Motion JPEG",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1445,11 +1451,11 @@
         {
           "stt": "8",
           "criteria": "Max frame rate",
-          "spec": "T?c ?? khung h�nh t?i ?a 30fps@5M (2592�1944) with WDR 120 dB. / Max frame rate: 30fps@5M (2592�1944) with WDR 120 dB.",
+          "spec": "Max frame rate: 30fps@5M (25921944) with WDR 120 dB.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "T?i ?a 50/60 fps / MAX 50/60 fps",
+            "data": "60 fps",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1458,16 +1464,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "T?c ?? khung h�nh 30fps ? ?? ph�n gi?i 5MP (2560x1920), Ch?ng ng??c s�ng WDR 120dB / 30fps@ 5MP (2560x1920), WDR 120dB",
+            "data": "30fps@ 5MP (2560x1920), WDR 120dB",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "L�n ??n 25/30 fps (50/60 Hz) ? t?t c? c�c ?? ph�n gi?i / Up to 25/30 fps (50/60 Hz) in all resolutions",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "60 Hz) in all resolutions",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1477,11 +1483,11 @@
         {
           "stt": "9",
           "criteria": "Operating temperature",
-          "spec": "Nhi?t ?? ho?t ??ng Ph� h?p trong d?i: -10�C ~ 45�C(-14�F ~ +113�F) / Operating temperature: Suitable range: -10�C ~ 45�C(-14�F ~ +113�F)",
+          "spec": "Operating temperature: Suitable range: -10°C ~ 45°C(-14°F ~ +113°F)",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "Nhi?t ?? ho?t ??ng: -40�C ~ 60�C (-40�F ~ 140�F) (L�n ??n 65�C trong 4 gi? khi t?t h?ng ngo?i) / Working Temperature: -40�C ~ 60�C (-40�F ~ 140�F) (65�C for 4 hours when IR off)",
+            "data": "Working Temperature: -40°C ~ 60°C (-40°F ~ 140°F) (65°C for 4 hours when IR off)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1490,16 +1496,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "Nhi?t ?? ho?t ??ng -40�C~+60�C (-40�F~+140�F) / Temperature -40�C~+60�C (-40�F~+140�F)",
+            "data": "Temperature -40°C~+60°C (-40°F~+140°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "Nhi?t ?? ho?t ??ng: -40�C~+60�C (-40�F~+140�F) / Temperature -40�C~+60�C(-40�F~+140�F)",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "Temperature -40°C~+60°C(-40°F~+140°F)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1509,11 +1515,11 @@
         {
           "stt": "10",
           "criteria": "Minimum illumination",
-          "spec": "?? nh?y s�ng t?i thi?u ?0.04 lux Ch? ?? m�u. / Minimum illumination: ?0.04 lux Color mode.",
+          "spec": "Minimum illumination: ≥0.04 lux Color mode.",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "M�u: 0.007 Lux@30IRE F1.4 Tr?ng/?en: 0Lux @F1.4 (B?t h?ng ngo?i) / Color: 0.007 Lux@30IRE F1.4 B/W: 0Lux @F1.4(IR on)",
+            "data": "W: 0Lux @F1.4(IR on)",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1522,16 +1528,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "M�u (1/30 gi�y, 30IRE) 0.04 Lux; Tr?ng/?en (1/30 gi�y, 30IRE) 0.004 Lux / Color (1/30sec, 30IRE) 0.04 Lux; B/W (1/30sec, 30IRE) 0.004 Lux",
+            "data": "30sec, 30IRE) 0.004 Lux",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "M�u (1/30 gi�y, 30IRE): 0.04 Lux; ?en/Tr?ng (1/30 gi�y, 30IRE): 0.004 Lux / Color(1/30sec, 30IRE) 0.04 Lux; BW(1/30sec, 30IRE) 0.004 Lux",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "30sec, 30IRE) 0.004 Lux",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1541,11 +1547,11 @@
         {
           "stt": "11",
           "criteria": "Video analytics support",
-          "spec": "H? tr? c�c t�nh n?ng ph�n t�ch video Ph�t hi?n x�m nh?p, V??t r�o, L?ng v?ng, Ph�t hi?n chuy?n ??ng, Ph�t hi?n ph� ho?i / Video analytics support: Intrusion detection, Line crossing, Loitering, Motion",
+          "spec": "Video analytics support: Intrusion detection, Line crossing, Loitering, Motion detection, Tampering detection",
           "honeywell": {
             "brand": "Honeywell, USA",
             "model": "HC60WB5R2P-C",
-            "data": "Ph�t hi?n chuy?n ??ng, Chuy?n ??ng th�ng minh, Thay ??i khung c?nh, X�m nh?p, L?ng v?ng nhi?u ng??i, Ph�t hi?n khu�n m?t, Ph�t hi?n v??t ranh gi?i, Ph�t hi?n b? qu�n ?? v?t, Ph�t hi?n m?t ?? v?t / Motion Detection, Smart Motion, Scene Change, Intrusion, Multi Loitering, Face Detection, Line Crossing Detection, Unattended Object Detection, Missing Object Detection",
+            "data": "Motion Detection, Smart Motion, Scene Change, Intrusion, Multi Loitering, Face Detection, Line Crossing Detection, Unattended Object Detection, Missing Object Detection",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
@@ -1554,16 +1560,16 @@
           "hanwha": {
             "brand": "Hanwha, Korea",
             "model": "XNO-A8084R",
-            "data": "D?a tr�n c�ng c? AI: Ph�t hi?n ??i t??ng, Ranh gi?i ?o (V??t qua/H??ng), Ph�t hi?n chuy?n ??ng, Ph�t hi?n ?eo kh?u trang, Ph�t hi?n kho?ng c�ch x� h?i, Ph�t hi?n tr??t ng�, Khu v?c ?o (L?ng v?ng/X�m nh?p/V�o/Ra/Xu?t hi?n/Bi?n m?t); C?nh b�o th�ng th??ng: Ph�t hi?n m?t ti�u c?, Gi? m?o, Ph�t hi?n �m thanh, Ph�t hi?n va ??p / Based on AI Engine: Object detection, Virtual line (Crossing/Direction), Motion detection, Face mask detection, Social distancing detection, Slip & fall detection, Virtual area (Loitering/Intrusion/Enter/Exit/Appear/Disappear); Normal: Defocus detection, Tampering, Audio detection, Shock detection",
+            "data": "Disappear); Normal: Defocus detection, Tampering, Audio detection, Shock detection",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"
             }
           },
           "axis": {
-            "brand": "AXIS, Th?y ?i?n / AXIS, Sweden",
-            "model": "AXIS P1487�LE",
-            "data": "Ph�n t�ch ??i t??ng AXIS - Ph�n lo?i: Con ng??i, ph??ng ti?n (� t�, xe bu�t, xe t?i, xe ??p, kh�c); C�c k?ch b?n: V??t ranh gi?i, c� m?t trong khu v?c, ??m v??t tuy?n, chi?m ch?, ?i b�m ?u�i, gi�m s�t ?? b?o h? (BETA), chuy?n ??ng (t?i ?a 10 k?ch b?n); C�c t�nh n?ng kh�c: Hi?n th? qu? ??o, khung bao quanh m� h�a m�u; ?a gi�c khu v?c bao g?m/lo?i tr?; C?u h�nh ph?i c?nh; S? ki?n b�o ??ng ONVIF / AXIS Object Analytics Object classes: humans, vehicles (types: cars, buses, trucks, bikes, other) Scenarios: line crossing, object in area, time in area, crossline counting, occupancy in area, tailgating detection, PPE monitoringBETA, motion in area, motion line crossing Up to 10 scenarios Other features: triggered objects visualized with trajectories, color-coded bounding boxes and tables Polygon include/exclude areas Perspective configuration ONVIF Motion Alarm event",
+            "brand": "AXIS, Sweden",
+            "model": "AXIS P1487-LE",
+            "data": "exclude areas Perspective configuration ONVIF Motion Alarm event",
             "comply": {
               "level": "pass",
               "label": "✅ Full comply"

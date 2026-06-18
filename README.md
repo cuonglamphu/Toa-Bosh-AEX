@@ -18,11 +18,15 @@ Chọn hệ thống để xem báo cáo chi tiết.
 ## Cấu trúc
 
 ```
-index.html              ← Trang chọn báo cáo
-reports/pa/index.html   ← Báo cáo PA đầy đủ
-reports/cctv/index.html ← Báo cáo CCTV (từ CSV REV01)
-data/cctv-data.json     ← Dữ liệu parse từ CSV
-assets/logo-one.png     ← Logo ONE
+index.html                    ← Trang chọn báo cáo
+reports/shared/               ← CSS/JS dùng chung (PDF, charts, tooltips)
+reports/pa/index.html         ← Báo cáo PA
+reports/cctv/index.html       ← HTML shell
+reports/cctv/cctv.css         ← Style riêng CCTV
+reports/cctv/cctv-report.js   ← Logic báo cáo CCTV
+data/cctv-data.js             ← Dữ liệu embed (local OK)
+data/cctv-insights.js         ← Narrative & thị trường
+scripts/parse-cctv-csv.mjs    ← Parse CSV → JSON/JS
 ```
 
 ## Cập nhật dữ liệu CCTV
